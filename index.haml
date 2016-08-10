@@ -1,0 +1,103 @@
+!!! 5
+%html{:lang => "en"}
+
+    %head
+
+        %meta{:charset => "utf-8"}
+
+        %title
+            Starburst.css - A mixin for doing it the easy way
+
+        %meta{:name => "description", :content => "Everyone said it couldn't be done. I'm glad to prove them wrong. Creating starbursts in CSS will no longer be a problem."}
+        %meta{:name => "keywords", :content => "css, starburst, scss, sass, mixin"}
+        %meta{:name => "author", :content => "Mattias Hagberg"}
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+        %meta{:name => "HandheldFriendly", :content => "True"}
+        %meta{:name => "MobileOptimized", :content => "320"}
+        %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+        %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "maroon"}
+
+        %link{:rel => "stylesheet", :href => "/css/style.css"}
+        %link{:rel => "stylesheet", :href => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-dark.min.css"}
+
+    %body
+
+        %section.maroon
+            %h1
+                Starbursts in CSS?!
+            %h3
+                A mixin for doing it the easy way
+
+        %section
+            %article
+                %h2
+                    Rectangular
+                %pre
+                    %code.language-scss
+                        \.burst_rect_1 {
+                        @include starburst(top,12,chocolate,darkorange,1);
+                        height: 200px; width: 200px;&#10;}
+                %div.burst_rect_1
+
+            %article
+                %pre
+                    %code.language-scss
+                        \.burst_rect_2 {
+                        @include starburst(both,11,darkorange,chocolate,1);
+                        height: 200px; width: 200px;&#10;}
+                %div.burst_rect_2
+
+            %article
+                %pre
+                    %code.language-scss
+                        \.burst_rect_3 {
+                        @include starburst(bottom,12,darkorange,chocolate,1);
+                        height: 200px; width: 200px;&#10;}
+                %div.burst_rect_3
+
+            %article
+                %h2
+                    Circular
+                %pre
+                    %code.language-scss
+                        \.burst_circ_1 {
+                        @include starburst(top,12,chocolate,darkorange,1,1);
+                        height: 200px; width: 200px;&#10;}
+                %div.burst_circ_4
+
+            %article
+                %pre
+                    %code.language-scss
+                        \.burst_circ_2 {
+                        @include starburst(both,11,darkorange,chocolate,1,1);
+                        height: 200px; width: 200px;&#10;}
+                %div.burst_circ_5
+
+            %article
+                %pre
+                    %code.language-scss
+                        \.burst_circ_3 {
+                        @include starburst(bottom,12,darkorange,chocolate,1,1);
+                        height: 200px; width: 200px;&#10;}
+                %div.burst_circ_6
+
+            %article.maroon
+                %h2
+                    Entire sections (with content inside!)
+                %pre
+                    %code.language-scss
+                        section {
+                        @include starburst(bottom,9,darkred,maroon,-1);
+                        height: 50vh;&#10;}
+            %div.maroon
+                %h1
+                    %a{:href => 'https://github.com/pestbarn/starburst.css'}>Available at Github
+
+        :javascript
+            var _gaq=[['_setAccount','UA-33644854-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+
+        %javascript{:src => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"}
+        %javascript{:src => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-scss.min.js"}

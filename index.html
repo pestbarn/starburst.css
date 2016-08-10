@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>
+      Starburst.css - A mixin for doing it the easy way
+    </title>
+    <meta content="Everyone said it couldn't be done. I'm glad to prove them wrong. Creating starbursts in CSS will no longer be a problem." name='description'>
+    <meta content='css, starburst, scss, sass, mixin' name='keywords'>
+    <meta content='Mattias Hagberg' name='author'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <meta content='True' name='HandheldFriendly'>
+    <meta content='320' name='MobileOptimized'>
+    <meta content='yes' name='apple-mobile-web-app-capable'>
+    <meta content='maroon' name='apple-mobile-web-app-status-bar-style'>
+    <link href='/css/style.css' rel='stylesheet'>
+    <link href='//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-dark.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <section class='maroon'>
+      <h1>
+        Starbursts in CSS?!
+      </h1>
+      <h3>
+        A mixin for doing it the easy way
+      </h3>
+    </section>
+    <section>
+      <article>
+        <h2>
+          Rectangular
+        </h2>
+        <pre><code class='language-scss'>.burst_rect_1 {
+        @include starburst(top,12,chocolate,darkorange,1);
+        height: 200px; width: 200px;&#10;}</code></pre>
+        <div class='burst_rect_1'></div>
+      </article>
+      <article>
+        <pre><code class='language-scss'>.burst_rect_2 {
+        @include starburst(both,11,darkorange,chocolate,1);
+        height: 200px; width: 200px;&#10;}</code></pre>
+        <div class='burst_rect_2'></div>
+      </article>
+      <article>
+        <pre><code class='language-scss'>.burst_rect_3 {
+        @include starburst(bottom,12,darkorange,chocolate,1);
+        height: 200px; width: 200px;&#10;}</code></pre>
+        <div class='burst_rect_3'></div>
+      </article>
+      <article>
+        <h2>
+          Circular
+        </h2>
+        <pre><code class='language-scss'>.burst_circ_1 {
+        @include starburst(top,12,chocolate,darkorange,1,1);
+        height: 200px; width: 200px;&#10;}</code></pre>
+        <div class='burst_circ_4'></div>
+      </article>
+      <article>
+        <pre><code class='language-scss'>.burst_circ_2 {
+        @include starburst(both,11,darkorange,chocolate,1,1);
+        height: 200px; width: 200px;&#10;}</code></pre>
+        <div class='burst_circ_5'></div>
+      </article>
+      <article>
+        <pre><code class='language-scss'>.burst_circ_3 {
+        @include starburst(bottom,12,darkorange,chocolate,1,1);
+        height: 200px; width: 200px;&#10;}</code></pre>
+        <div class='burst_circ_6'></div>
+      </article>
+      <article class='maroon'>
+        <h2>
+          Entire sections (with content inside!)
+        </h2>
+        <pre><code class='language-scss'>section {
+        @include starburst(bottom,9,darkred,maroon,-1);
+        height: 50vh;&#10;}</code></pre>
+      </article>
+      <div class='maroon'>
+        <h1><a href='https://github.com/pestbarn/starburst.css'>Available at Github</a></h1>
+      </div>
+    </section>
+    <script>
+      var _gaq=[['_setAccount','UA-33644854-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    <javascript src='//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js'></javascript>
+    <javascript src='//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-scss.min.js'></javascript>
+  </body>
+</html>

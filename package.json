@@ -1,0 +1,12 @@
+{
+  "name": "starburst.css",
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": "github:pestbarn/starburst.css",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-haml2html": "^0.3.1"
+  }
+}
