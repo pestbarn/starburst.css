@@ -15,6 +15,10 @@ section {
 		clear: both;
 		margin: 0 auto 10vh !important;
 		max-width: 70em;
+
+		h1 {
+			color: #fff;
+		}
 	}
 
 	pre {
@@ -27,13 +31,20 @@ section {
 	}
 }
 
+section, footer {
+	clear: both;
+}
+
 .maroon {
 	color: ghostwhite;
 	height: 50vh;
 }
-section.maroon {
+section.maroon, footer.maroon {
 	@include starburst(both,11,darkred,maroon,0);
 	max-width: 100vw;
+	h1 a {
+		cursor: pointer;
+	}
 }
 article.maroon {
 	@include starburst(bottom,4,darkred,maroon,0);
