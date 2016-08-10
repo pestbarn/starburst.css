@@ -48,7 +48,7 @@ As you may notice, the variables in the mixin are named with Unicode characters.
 
 | Variable | Representation                |
 | :---     | :---                          |
-| `$⇅`     | Alignment (`top|bottom|both') |
+| `$⇅`     | Alignment (`top|bottom|both`) |
 | `$↭`     | Angle degree                  |
 | `$⬔`     | First color                   |
 | `$⬕`     | Second color                  |
