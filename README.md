@@ -7,11 +7,6 @@
 ## Requirements
 * Sass 3.4.22 (Selective Steve) or higher
 * Compass 1.0.3 (Polaris) or higher
-* *Optional:*
-  * *Homebrew 0.9.9*
-  * *Node 6.3.1*
-  * *Haml 4.0.7*
-  * *Grunt 1.0.1*
 
 ## Installation
 1. Download or copy `starburst.scss` (or `git clone git@github.com:pestbarn/starburst.css.git`)
@@ -48,6 +43,26 @@ div.burst {
 | `circle`  | `boolean`                | `1`       | Set to `1` to create a circular element. Leave blank for default behavior. **Default:** `null`.              |
 **\* = Required attributes**
 
+## Variables explained
+As you may notice, the variables in the mixin are named with Unicode characters. Here's what they represent:
+| Variable | Representation                |
+| :---     | :---                          |
+| `$⇅`     | Alignment (`top|bottom|both') |
+| `$↭`     | Angle degree                  |
+| `$⬔`     | First color                   |
+| `$⬕`     | Second color                  |
+| `$❏`     | Z-index                       |
+| `$⬤`     | Make element circular or not  |
+| `$✓`     | The gradient output           |
+| `$α`     | Set start angle               |
+| `$ω`     | Set end angle                 |
+| `$↻`     | 1-index incremental counter   |
+| `$✳`     | Current angle of burst ray    |
+| `$↩`     | Workaround for proper commas  |
+| `$❖`     | Current color of burst ray    |
+| `$⮐`     | Workaround for proper commas  |
+| `$⩲`     | Add current angle + set angle |
+
 ## Browser support
 | Browser         | Version tested               |
 | :---            | ---:                         |
@@ -60,20 +75,7 @@ div.burst {
 | Safari (mobile) | 601.1 (iOS 9.3)              |
 *Have you tested in other browsers? Please leave a comment [here](https://github.com/pestbarn/starburst.css/issues/1).*
 
-## Recommended workflow for contributing (OS X)
-**Contributing to this project is optional, and is in no way a requirement to run Starburst.css**
+## Contributing
+Please use the `gh-pages` branch when adding your contributions. This way, you'll already have a site configured for use with Haml, Gruntfile, Gemfile, package.json, and Sass + Compass. When contributing, please make a pull request - don't push to `master`.
 
-1. You should have Ruby installed by default, confirm this with `ruby -v` (otherwise, [download Ruby](https://www.ruby-lang.org/en/documentation/installation/))
-2. Run `gem update --system`
-3. Install [Sass](http://sass-lang.com/install) by running `gem install sass`
-4. Install [Compass](http://compass-style.org/install/) by running `gem install compass`
-5. Install [Haml](http://haml.info/download.html) by running `gem install haml`
-6. Install [Homebrew](http://brew.sh/) and run `brew update`
-7. Install [Node.js](https://nodejs.org/en/) by running `brew install node`
-8. Install [Grunt](http://gruntjs.com/getting-started) by running `npm install -g grunt-cli`
-9. Run `git clone git@github.com:pestbarn/starburst.css.git` and then `git checkout -b your_branch`
-   * **Always do your changes in a separate branch!** Pushing to `master` is not allowed.
-10. Run `npm install` to install the dependencies listed in `package.json`
-11. You can now do all the changes you need, and run `grunt watch` to compile everything on-the-go
-12. When ready, push your new branch by running `git push -u origin your_branch`
-13. Create a pull request of your newly pushed branch by going to `https://github.com/pestbarn/starburst.css/tree/your_branch`
+You'll find the `gh-pages` branch [right here](https://github.com/pestbarn/starburst.css/tree/gh-pages).
