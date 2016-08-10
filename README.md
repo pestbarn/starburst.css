@@ -79,4 +79,4 @@ As you may notice, the variables in the mixin are named with Unicode characters.
 ## Contributing
 Please use the `gh-pages` branch when adding your contributions. This way, you'll already have a site configured for use with Haml, Gruntfile, Gemfile, package.json, and Sass + Compass. When contributing, please make a pull request - don't push to `master`.
 
-You'll find the `gh-pages` branch [right here](https://github.com/pestbarn/starburst.css/tree/gh-pages).
+You'll find the `gh-pages` branch [right here](https://github.com/pestbarn/starburst.css/tree/gh-pages#recommended-workflow-for-contributing-os-x).
