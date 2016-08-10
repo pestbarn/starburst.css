@@ -48,6 +48,27 @@ div.burst {
 | `circle`  | `boolean`                | `1`       | Set to `1` to create a circular element. Leave blank for default behavior. **Default:** `null`.              |
 **\* = Required attributes**
 
+## Variables explained
+As you may notice, the variables in the mixin are named with Unicode characters. Here's what they represent:
+
+| Variable | Representation                |
+| :---     | :---                          |
+| `$⇅`     | Alignment (`top|bottom|both`) |
+| `$↭`     | Angle degree                  |
+| `$⬔`     | First color                   |
+| `$⬕`     | Second color                  |
+| `$❏`     | Z-index                       |
+| `$⬤`     | Make element circular or not  |
+| `$✓`     | The gradient output           |
+| `$α`     | Set start angle               |
+| `$ω`     | Set end angle                 |
+| `$↻`     | 1-index incremental counter   |
+| `$✳`     | Current angle of burst ray    |
+| `$↩`     | Workaround for proper commas  |
+| `$❖`     | Current color of burst ray    |
+| `$⮐`     | Workaround for proper commas  |
+| `$⩲`     | Add current angle + set angle |
+
 ## Browser support
 | Browser         | Version tested               |
 | :---            | ---:                         |
@@ -62,6 +83,8 @@ div.burst {
 
 ## Recommended workflow for contributing (OS X)
 **Contributing to this project is optional, and is in no way a requirement to run Starburst.css**
+
+*Note: if you're doing changes to the Sass file, please use the `source/starburst.scss` file, and not the one in the `scss` folder.* 
 
 1. You should have Ruby installed by default, confirm this with `ruby -v` (otherwise, [download Ruby](https://www.ruby-lang.org/en/documentation/installation/))
 2. Run `gem update --system`
