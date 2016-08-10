@@ -4,6 +4,7 @@
 body {
 	@include starburst(top,20,tan,bisque,-1);
 	font-family: 'Lato', Arial, sans-serif;
+	margin: 0;
 }
 
 section {
