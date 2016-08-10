@@ -45,6 +45,7 @@ div.burst {
 
 ## Variables explained
 As you may notice, the variables in the mixin are named with Unicode characters. Here's what they represent:
+
 | Variable | Representation                |
 | :---     | :---                          |
 | `$⇅`     | Alignment (`top|bottom|both') |
