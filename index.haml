@@ -17,7 +17,7 @@
         %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
         %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "maroon"}
 
-        %link{:rel => "stylesheet", :href => "/css/style.css"}
+        %link{:rel => "stylesheet", :href => "css/main.css"}
         %link{:rel => "stylesheet", :href => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-dark.min.css"}
 
     %body
@@ -89,6 +89,13 @@
                         section {
                         @include starburst(bottom,9,darkred,maroon,-1);
                         height: 50vh;&#10;}
+
+            %article
+                %h1
+                    Yes, it works on the
+                    %code.language-html body
+                    as well.
+
             %div.maroon
                 %h1
                     %a{:href => 'https://github.com/pestbarn/starburst.css'}>Available at Github
