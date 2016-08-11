@@ -68,7 +68,7 @@ section.maroon, footer.maroon {
 
 article.maroon {
 	padding: 5em;
-	@include border-radius(50px);
+	@include border-radius(50px !important);
 	text-shadow: 2px 2px 5px black;
 	@include starburst(bottom,4,darkred,maroon,0);
 
