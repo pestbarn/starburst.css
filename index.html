@@ -15,7 +15,7 @@
     <meta content='maroon' name='apple-mobile-web-app-status-bar-style'>
     <link href='//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css' rel='stylesheet'>
     <link href='css/main.css' rel='stylesheet'>
-    <link href='//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-dark.min.css' rel='stylesheet'>
+    <link href='//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-twilight.min.css' rel='stylesheet'>
   </head>
   <body>
     <section class='maroon'>
@@ -29,7 +29,7 @@
     <section>
       <article>
         <h2>
-          Rectangular
+          <code class='language-css'>.rectangular{}</code>
         </h2>
         <pre><code class='language-scss'>.burst_rect_1 {&#x000A;    @include starburst(top,12,chocolate,darkorange,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_rect_1'></div>
@@ -44,7 +44,7 @@
       </article>
       <article>
         <h2>
-          Circular
+          <code class='language-scss'>.circular{}</code>
         </h2>
         <pre><code class='language-scss'>.burst_circ_1 {&#x000A;    @include starburst(top,12,chocolate,darkorange,1,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_circ_4'></div>
@@ -59,9 +59,7 @@
       </article>
       <article>
         <h2>
-          Everything that can have a
-          <code class='language-scss'>background-image</code>
-          will do just fine
+          <code class='language-scss'>// Anything that can have a background will do just fine</code>
         </h2>
         <pre><code class='language-scss'>.burst_rect_4.skew {&#x000A;    @include starburst(both, 6, chocolate, darkorange, 1, 0);&#x000A;    @include transform(skew(20deg));&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_rect_4 skew'></div>
@@ -72,7 +70,7 @@
       </article>
       <article class='maroon'>
         <h2>
-          Entire sections (with or without content)
+          Entire sections
         </h2>
         <pre><code class='language-scss'>section {&#x000A;    @include starburst(bottom,9,darkred,maroon,-1);&#x000A;    height: 50vh; width: 100%;&#x000A;}</code></pre>
         <h2>
@@ -95,10 +93,10 @@
       </article>
     </section>
     <footer class='maroon'>
-      <h1><a href='https://github.com/pestbarn/starburst.css'>Available at Github</a></h1>
+      <h1><a href='//github.com/pestbarn/starburst.css'>Available at Github</a></h1>
       <h3>
         Released under the
-        <a href='https://github.com/pestbarn/starburst.css/blob/master/LICENSE'>MIT License</a>
+        <a href='//github.com/pestbarn/starburst.css/blob/master/LICENSE'>MIT License</a>
         by Mattias Hagberg, 2016
       </h3>
     </footer>

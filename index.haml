@@ -19,7 +19,7 @@
 
         %link{:rel => "stylesheet", :href => "//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"}
         %link{:rel => "stylesheet", :href => "css/main.css"}
-        %link{:rel => "stylesheet", :href => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-dark.min.css"}
+        %link{:rel => "stylesheet", :href => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-twilight.min.css"}
 
     %body
 
@@ -32,7 +32,7 @@
         %section
             %article
                 %h2
-                    Rectangular
+                    %code.language-css .rectangular{}
                 %pre
                     %code.language-scss
                         = preserve do
@@ -67,7 +67,7 @@
 
             %article
                 %h2
-                    Circular
+                    %code.language-scss .circular{}
                 %pre
                     %code.language-scss
                         = preserve do
@@ -102,9 +102,7 @@
 
             %article
                 %h2
-                    Everything that can have a
-                    %code.language-scss background-image
-                    will do just fine
+                    %code.language-scss // Anything that can have a background will do just fine
                 %pre
                     %code.language-scss
                         = preserve do
@@ -131,7 +129,7 @@
 
             %article.maroon
                 %h2
-                    Entire sections (with or without content)
+                    Entire sections
                 %pre
                     %code.language-scss
                         = preserve do
@@ -157,10 +155,10 @@
 
         %footer.maroon
             %h1
-                %a{:href => 'https://github.com/pestbarn/starburst.css'}>Available at Github
+                %a{:href => '//github.com/pestbarn/starburst.css'}>Available at Github
             %h3
                 Released under the
-                %a{:href => 'https://github.com/pestbarn/starburst.css/blob/master/LICENSE'}MIT License
+                %a{:href => '//github.com/pestbarn/starburst.css/blob/master/LICENSE'}MIT License
                 by Mattias Hagberg, 2016
 
         :javascript
