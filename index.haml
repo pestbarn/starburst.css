@@ -17,9 +17,9 @@
         %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
         %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "maroon"}
 
-        %link{:rel => "stylesheet", :href => "//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"}
+        %link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"}
         %link{:rel => "stylesheet", :href => "css/main.css"}
-        %link{:rel => "stylesheet", :href => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-twilight.min.css"}
+        %link{:rel => "stylesheet", :href => "http://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism-twilight.min.css"}
 
     %body
 
@@ -101,8 +101,18 @@
                 %div.burst_circ_7
 
             %article
+                %pre
+                    %code.language-scss
+                        = preserve do
+                            :escaped
+                                // …psst! As you may have noticed, Starburst
+                                // works on the <body> element as well. Any
+                                // and all elements which can have backgrounds
+                                // will do just fine!
+
+            %article
                 %h2
-                    %code.language-scss // Anything that can have a background will do just fine
+                    %code.language-scss .transforms, .transitions {}
                 %pre
                     %code.language-scss
                         = preserve do
@@ -120,12 +130,33 @@
                         = preserve do
                             :escaped
                                 .burst_circ_8.egg {
+                                    @include starburst(both, 9, darkorange, chocolate, 1, 1);
+                                    width: 126px;
+                                    height: 180px;
+                                    @include border-radius(50% 50% 50% 50% / 60% 60% 40% 40%);
+
+                                    &:hover {
+                                        @include transition(1s all);
+                                        @include border-radius(10%);
+                                    }
+                                }
+                %div.burst_circ_8.egg
+
+            %article
+                %h2
+                    %code.language-scss .animations{ /* yeah! */ }
+                %pre
+                    %code.language-scss
+                        = preserve do
+                            :escaped
+                                .burst_circ_8.egg {
                                     @include starburst();
                                     width: 126px;
                                     height: 180px;
                                     @include border-radius(50% 50% 50% 50% / 60% 60% 40% 40%);
+                                    @include animation(spin 4s infinite linear alternate-reverse);
                                 }
-                %div.burst_circ_8.egg
+                %div.burst_circ_8.egg.spin
 
             %article.maroon
                 %h2
@@ -147,12 +178,6 @@
                     %code.language-scss :after
                     pseudo-elements for something else. Starburst needs these to work properly.
 
-            %article
-                %h1
-                    …psst! starburst works on the
-                    %code.language-html &lt;body&gt;
-                    as well.
-
         %footer.maroon
             %h1
                 %a{:href => '//github.com/pestbarn/starburst.css'}>Available at Github
@@ -167,5 +192,5 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
 
-        %script{:src => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"}
-        %script{:src => "//cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-scss.min.js"}
+        %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"}
+        %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-scss.min.js"}
