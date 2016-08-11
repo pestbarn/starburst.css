@@ -100,3 +100,10 @@ As you may notice, the variables in the mixin are named with Unicode characters.
 11. You can now do all the changes you need, and run `grunt watch` to compile everything on-the-go
 12. When ready, push your new branch by running `git push -u origin your_branch`
 13. Create a pull request of your newly pushed branch by going to `https://github.com/pestbarn/starburst.css/tree/your_branch`
+
+## Credits
+* Special thanks to [Calley Nye](https://about.me/calleynye) for the [original inspiration](http://codepen.io/syren/pen/Ahkrv) which got me started on Starburst.css, 
+* To [Lea Verou](http://lea.verou.me/) for the exceptional [Prism.js](http://prismjs.com/)
+* To [the Codepen team](http://codepen.io/about/) for making my life so much easier)
+* To [the H5BP team](https://html5boilerplate.com/)
+* To [Nicolas Gallagher](http://nicolasgallagher.com/) and [Jonathan Neal](http://www.jonathantneal.com/) for [Normalize.css](https://necolas.github.io/normalize.css/) 
