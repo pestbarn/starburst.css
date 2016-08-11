@@ -31,51 +31,60 @@
         <h2>
           Rectangular
         </h2>
-        <pre><code class='language-scss'>.burst_rect_1 {
-        @include starburst(top,12,chocolate,darkorange,1);
-        height: 200px; width: 200px;&#10;}</code></pre>
+        <pre><code class='language-scss'>.burst_rect_1 {&#x000A;    @include starburst(top,12,chocolate,darkorange,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_rect_1'></div>
       </article>
       <article>
-        <pre><code class='language-scss'>.burst_rect_2 {
-        @include starburst(both,11,darkorange,chocolate,1);
-        height: 200px; width: 200px;&#10;}</code></pre>
+        <pre><code class='language-scss'>.burst_rect_2 {&#x000A;    @include starburst(both,11,darkorange,chocolate,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_rect_2'></div>
       </article>
       <article>
-        <pre><code class='language-scss'>.burst_rect_3 {
-        @include starburst(bottom,12,darkorange,chocolate,1);
-        height: 200px; width: 200px;&#10;}</code></pre>
+        <pre><code class='language-scss'>.burst_rect_3 {&#x000A;    @include starburst(bottom,12,darkorange,chocolate,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_rect_3'></div>
       </article>
       <article>
         <h2>
           Circular
         </h2>
-        <pre><code class='language-scss'>.burst_circ_1 {
-        @include starburst(top,12,chocolate,darkorange,1,1);
-        height: 200px; width: 200px;&#10;}</code></pre>
+        <pre><code class='language-scss'>.burst_circ_1 {&#x000A;    @include starburst(top,12,chocolate,darkorange,1,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_circ_4'></div>
       </article>
       <article>
-        <pre><code class='language-scss'>.burst_circ_2 {
-        @include starburst(both,11,darkorange,chocolate,1,1);
-        height: 200px; width: 200px;&#10;}</code></pre>
+        <pre><code class='language-scss'>.burst_circ_2 {&#x000A;    @include starburst(both,11,darkorange,chocolate,1,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_circ_5'></div>
       </article>
       <article>
-        <pre><code class='language-scss'>.burst_circ_3 {
-        @include starburst(bottom,12,darkorange,chocolate,1,1);
-        height: 200px; width: 200px;&#10;}</code></pre>
+        <pre><code class='language-scss'>.burst_circ_3 {&#x000A;    @include starburst(bottom,12,darkorange,chocolate,1,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_circ_6'></div>
+      </article>
+      <article>
+        <h2>
+          Everything that can have a
+          <code class='language-scss'>background-image</code>
+          will do just fine
+        </h2>
+        <pre><code class='language-scss'>.burst_rect_4.skew {&#x000A;    @include starburst(both, 6, chocolate, darkorange, 1, 0);&#x000A;    @include transform(skew(20deg));&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
+        <div class='burst_rect_4 skew'></div>
+      </article>
+      <article>
+        <pre><code class='language-scss'>.burst_circ_8.egg {&#x000A;    @include starburst();&#x000A;    width: 126px;&#x000A;    height: 180px;&#x000A;    @include border-radius(50% 50% 50% 50% / 60% 60% 40% 40%);&#x000A;}</code></pre>
+        <div class='burst_circ_8 egg'></div>
       </article>
       <article class='maroon'>
         <h2>
-          Entire sections (with content inside!)
+          Entire sections (with or without content)
         </h2>
-        <pre><code class='language-scss'>section {
-        @include starburst(bottom,9,darkred,maroon,-1);
-        height: 50vh;&#10;}</code></pre>
+        <pre><code class='language-scss'>section {&#x000A;    @include starburst(bottom,9,darkred,maroon,-1);&#x000A;    height: 50vh; width: 100%;&#x000A;}</code></pre>
+        <h2>
+          Neat, huh?
+        </h2>
+        <p>
+          The only occasion when you shouldn't use Starburst is when you need to use the
+          <code class='language-scss'>:before</code>
+          and
+          <code class='language-scss'>:after</code>
+          pseudo-elements for something else. Starburst needs these to work properly.
+        </p>
       </article>
       <article>
         <h1>

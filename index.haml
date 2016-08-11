@@ -35,25 +35,34 @@
                     Rectangular
                 %pre
                     %code.language-scss
-                        \.burst_rect_1 {
-                        @include starburst(top,12,chocolate,darkorange,1);
-                        height: 200px; width: 200px;&#10;}
+                        = preserve do
+                            :escaped
+                                .burst_rect_1 {
+                                    @include starburst(top,12,chocolate,darkorange,1);
+                                    height: 200px; width: 200px;
+                                }
                 %div.burst_rect_1
 
             %article
                 %pre
                     %code.language-scss
-                        \.burst_rect_2 {
-                        @include starburst(both,11,darkorange,chocolate,1);
-                        height: 200px; width: 200px;&#10;}
+                        = preserve do
+                            :escaped
+                                .burst_rect_2 {
+                                    @include starburst(both,11,darkorange,chocolate,1);
+                                    height: 200px; width: 200px;
+                                }
                 %div.burst_rect_2
 
             %article
                 %pre
                     %code.language-scss
-                        \.burst_rect_3 {
-                        @include starburst(bottom,12,darkorange,chocolate,1);
-                        height: 200px; width: 200px;&#10;}
+                        = preserve do
+                            :escaped
+                                .burst_rect_3 {
+                                    @include starburst(bottom,12,darkorange,chocolate,1);
+                                    height: 200px; width: 200px;
+                                }
                 %div.burst_rect_3
 
             %article
@@ -61,35 +70,84 @@
                     Circular
                 %pre
                     %code.language-scss
-                        \.burst_circ_1 {
-                        @include starburst(top,12,chocolate,darkorange,1,1);
-                        height: 200px; width: 200px;&#10;}
+                        = preserve do
+                            :escaped
+                                .burst_circ_1 {
+                                    @include starburst(top,12,chocolate,darkorange,1,1);
+                                    height: 200px; width: 200px;
+                                }
                 %div.burst_circ_4
 
             %article
                 %pre
                     %code.language-scss
-                        \.burst_circ_2 {
-                        @include starburst(both,11,darkorange,chocolate,1,1);
-                        height: 200px; width: 200px;&#10;}
+                        = preserve do
+                            :escaped
+                                .burst_circ_2 {
+                                    @include starburst(both,11,darkorange,chocolate,1,1);
+                                    height: 200px; width: 200px;
+                                }
                 %div.burst_circ_5
 
             %article
                 %pre
                     %code.language-scss
-                        \.burst_circ_3 {
-                        @include starburst(bottom,12,darkorange,chocolate,1,1);
-                        height: 200px; width: 200px;&#10;}
+                        = preserve do
+                            :escaped
+                                .burst_circ_3 {
+                                    @include starburst(bottom,12,darkorange,chocolate,1,1);
+                                    height: 200px; width: 200px;
+                                }
                 %div.burst_circ_6
+
+            %article
+                %h2
+                    Everything that can have a
+                    %code.language-scss background-image
+                    will do just fine
+                %pre
+                    %code.language-scss
+                        = preserve do
+                            :escaped
+                                .burst_rect_4.skew {
+                                    @include starburst(both, 6, chocolate, darkorange, 1, 0);
+                                    @include transform(skew(20deg));
+                                    height: 200px; width: 200px;
+                                }
+                %div.burst_rect_4.skew
+
+            %article
+                %pre
+                    %code.language-scss
+                        = preserve do
+                            :escaped
+                                .burst_circ_8.egg {
+                                    @include starburst();
+                                    width: 126px;
+                                    height: 180px;
+                                    @include border-radius(50% 50% 50% 50% / 60% 60% 40% 40%);
+                                }
+                %div.burst_circ_8.egg
 
             %article.maroon
                 %h2
-                    Entire sections (with content inside!)
+                    Entire sections (with or without content)
                 %pre
                     %code.language-scss
-                        section {
-                        @include starburst(bottom,9,darkred,maroon,-1);
-                        height: 50vh;&#10;}
+                        = preserve do
+                            :escaped
+                                section {
+                                    @include starburst(bottom,9,darkred,maroon,-1);
+                                    height: 50vh; width: 100%;
+                                }
+                %h2
+                    Neat, huh?
+                %p
+                    The only occasion when you shouldn't use Starburst is when you need to use the
+                    %code.language-scss :before
+                    and
+                    %code.language-scss :after
+                    pseudo-elements for something else. Starburst needs these to work properly.
 
             %article
                 %h1
