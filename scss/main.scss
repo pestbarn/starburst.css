@@ -30,6 +30,19 @@ section {
 				color: #fff !important;
 			}
 		}
+
+		@include mq(500px) {
+			h2 {
+				font-size: 1.25em;
+			}
+		}
+
+		&.notice {
+			pre {
+				width: 100%;
+				display: block;
+			}
+		}
 	}
 
 	pre {
@@ -67,17 +80,15 @@ section.maroon, footer.maroon {
 }
 
 article.maroon {
-	padding: 5em;
+	padding: 2.5em;
 	@include border-radius(50px !important);
 	text-shadow: 2px 2px 5px black;
 	@include starburst(bottom,4,darkred,maroon,0);
-
-	@include mq {
-		padding: 2.5em;
-	}
+	height: auto;
 
 	>pre {
 		width: calc(100%) !important;
+		transform: translateY(0px);
 	}
 }
 
@@ -103,16 +114,21 @@ div[class*="burst_"] {
 	&.egg {
 		width: 126px;
 		height: 180px;
+		margin-top: 3em;
 		@include border-radius(50% 50% 50% 50% / 60% 60% 40% 40%);
 		// basically, radius:    4x (width/2)  / 2x (height*0.6) 2x (height*0.4)
-
-		&.spin {
-			@include animation(spin 4s infinite linear alternate-reverse);
-		}
 
 		&:hover {
 			@include transition(1s all);
 			@include border-radius(10%);
+		}
+
+		@include mq {
+			margin-top: 1em;
+		}
+
+		&.animate {
+			@include animation(egg 2s infinite ease-in-out alternate-reverse);
 		}
 	}
 }
@@ -154,11 +170,11 @@ a {
 	color: ghostwhite;
 }
 
-@include keyframes(spin) {
+@include keyframes(egg) {
 	from {
-		@include transform(rotate(0deg));
+		@include transform(scale(1));
 	}
 	to {
-		@include transform(rotate(360deg));
+		@include transform(scale(1.25));
 	}
 }

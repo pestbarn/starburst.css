@@ -100,15 +100,17 @@
                                 }
                 %div.burst_circ_7
 
-            %article
+            %article.notice
                 %pre
                     %code.language-scss
                         = preserve do
                             :escaped
-                                // …psst! As you may have noticed, Starburst
-                                // works on the <body> element as well. Any
-                                // and all elements which can have backgrounds
-                                // will do just fine!
+                                //                                                    \  :  /
+                                // …psst! As you may have noticed, Starburst       `. __/ \__ .´
+                                // works on the <body> element as well. Any        _ _\     /_ _
+                                // and all elements which can have backgrounds        /_   _\
+                                // will do just fine!                               .´  \ /  `.
+                                //                                                    /  :  \
 
             %article
                 %h2
@@ -150,13 +152,13 @@
                         = preserve do
                             :escaped
                                 .burst_circ_8.egg {
-                                    @include starburst();
+                                    @include starburst(both, 9, darkorange, chocolate, 1, 1);
                                     width: 126px;
                                     height: 180px;
                                     @include border-radius(50% 50% 50% 50% / 60% 60% 40% 40%);
-                                    @include animation(spin 4s infinite linear alternate-reverse);
+                                    @include animation(egg 2s infinite ease-in-out alternate-reverse);
                                 }
-                %div.burst_circ_8.egg.spin
+                %div.burst_circ_8.egg.animate
 
             %article.maroon
                 %h2

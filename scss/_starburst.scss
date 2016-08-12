@@ -1,5 +1,3 @@
-@import "compass";
-
 @mixin starburst($⇅, $↭, $⬔, $⬕, $❏: null, $⬤: null) {
 	$✓: null;
 	$α: if($⇅ == 'top', 180, 0);

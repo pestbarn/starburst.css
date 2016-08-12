@@ -57,8 +57,8 @@
         <pre><code class='language-scss'>.burst_circ_7 {&#x000A;    @include starburst(bottom,12,darkorange,chocolate,1,1);&#x000A;    height: 200px; width: 200px;&#x000A;}</code></pre>
         <div class='burst_circ_7'></div>
       </article>
-      <article>
-        <pre><code class='language-scss'>// …psst! As you may have noticed, Starburst&#x000A;// works on the &lt;body&gt; element as well. Any&#x000A;// and all elements which can have backgrounds&#x000A;// will do just fine!</code></pre>
+      <article class='notice'>
+        <pre><code class='language-scss'>//                                                    \  :  /&#x000A;// …psst! As you may have noticed, Starburst       `. __/ \__ .´&#x000A;// works on the &lt;body&gt; element as well. Any        _ _\     /_ _&#x000A;// and all elements which can have backgrounds        /_   _\&#x000A;// will do just fine!                               .´  \ /  `.&#x000A;//                                                    /  :  \</code></pre>
       </article>
       <article>
         <h2>
@@ -75,8 +75,8 @@
         <h2>
           <code class='language-scss'>.animations{ /* yeah! */ }</code>
         </h2>
-        <pre><code class='language-scss'>.burst_circ_8.egg {&#x000A;    @include starburst();&#x000A;    width: 126px;&#x000A;    height: 180px;&#x000A;    @include border-radius(50% 50% 50% 50% / 60% 60% 40% 40%);&#x000A;    @include animation(spin 4s infinite linear alternate-reverse);&#x000A;}</code></pre>
-        <div class='burst_circ_8 egg spin'></div>
+        <pre><code class='language-scss'>.burst_circ_8.egg {&#x000A;    @include starburst(both, 9, darkorange, chocolate, 1, 1);&#x000A;    width: 126px;&#x000A;    height: 180px;&#x000A;    @include border-radius(50% 50% 50% 50% / 60% 60% 40% 40%);&#x000A;    @include animation(egg 2s infinite ease-in-out alternate-reverse);&#x000A;}</code></pre>
+        <div class='burst_circ_8 egg animate'></div>
       </article>
       <article class='maroon'>
         <h2>
