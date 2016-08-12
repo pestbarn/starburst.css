@@ -7,15 +7,15 @@
 	$↻: 1;
 
 	@while $α <= $ω {
-        $✳: $α;
+	        $✳: $α;
 		$↩: ($α < $ω) and (($α + $↭) - $ω <= 0);
-        $❖: if($↻ % 2 == 1, $⬕, $⬔);
-        $⮐: if($↩, ',', null);
+        	$❖: if($↻ % 2 == 1, $⬕, $⬔);
+        	$⮐: if($↩, ',', null);
 		$⩲: $α+$↭;
 		$α: $⩲;
 		$↻: $↻ + 1;
 		$✓: append($✓, 'linear-gradient(#{$✳}deg, transparent 50%, #{$❖} 50%)#{$⮐}');
-    }
+	}
 
 	@if $⇅ == 'both' {
 		&:after {
@@ -34,7 +34,7 @@
 	position: relative;
 	@include background-image(#{$✓});
 	background-repeat: no-repeat;
-    background-color: if($α >= 180, $⬕, $⬔);
+	background-color: if($α >= 180, $⬕, $⬔);
 	border-radius: if($⬤ == 1, 50%, initial);
 
 	& * {
