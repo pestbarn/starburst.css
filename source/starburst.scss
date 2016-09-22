@@ -1,52 +1,66 @@
 @import "compass";
 
-@mixin starburst($⇅, $↭, $⬔, $⬕, $❏: null, $⬤: null) {
-	$✓: null;
-	$α: if($⇅ == 'top', 180, 0);
-	$ω: if($⇅ == 'bottom', 180, 360);
-	$↻: 1;
+@mixin starburst($align, $degree, $color1, $color2, $zindex: null, $circle: null) {
+	// PROCESS AND PREPARE ARGS
+	$output: null;
+	$angleStart: if($align == 'top', 180, 0);
+	$angleEnd: if($align == 'bottom', 180, 360);
+	$i: 1;
 
-	@while $α <= $ω {
-		$✳: $α;
-		$↩: ($α < $ω) and (($α + $↭) - $ω <= 0);
-		$❖: if($↻ % 2 == 1, $⬕, $⬔);
-		$⮐: if($↩, ',', null);
-		$⩲: $α+$↭;
-		$α: $⩲;
-		$↻: $↻ + 1;
-		$✓: append($✓, 'linear-gradient(#{$✳}deg, transparent 50%, #{$❖} 50%)#{$⮐}');
+	// LOOP THROUGH ARGS AND SET UP ACCORDINGLY
+	@while $angleStart <= $angleEnd {
+		$currAngle: $angleStart;
+
+		$notLast: ($angleStart < $angleEnd) and (($angleStart + $degree) - $angleEnd <= 0);
+		$checkLast: if($notLast, ',', null);
+		// This little trick is needed because ending the final value
+		// of a linear-gradient background with a comma is not allowed
+
+		$currColor: if($i % 2 == 1, $color2, $color1);
+		// Alternate colors
+
+		$nextAngle: $angleStart+$degree;
+		$angleStart: $nextAngle;
+		$i: $i + 1;
+
+		$output: append($output, 'linear-gradient(#{$currAngle}deg, transparent 50%, #{$currColor} 50%)#{$checkLast}');
 	}
 
-	@if $⇅ == 'both' {
-		&:after {
-			@include starburst(bottom,$↭,$⬔,$⬕);
+	@if $align == 'both' {
+		// If alignment is 'both', we need to do some hacking, since it's
+		// not actually possible to create a full 360 degree starburst.
+		// The mixin calls itself, and creates starbursts for the
+		// ::after and ::before elements (bottom and top, respectively).
+		&::after {
+			@include starburst(bottom, $degree, $color1, $color2);
 			top: 50% !important;
 			border-radius: 0% !important;
 			background-position: 0 100%;
 			background-size: 100% 200%;
 		}
-		&:before {
-			@include starburst(top,$↭,$⬔,$⬕);
+		&::before {
+			@include starburst(top, $degree, $color1, $color2);
 		}
 		overflow: hidden;
 	}
 
+	// GENERAL STYLING OF FINAL OUTPUT
+	@include background-image(#{$output});
 	position: relative;
-	@include background-image(#{$✓});
 	background-repeat: no-repeat;
-	background-color: if($α >= 180, $⬕, $⬔);
-	border-radius: if($⬤ == 1, 50%, initial);
+	background-color: if($angleStart >= 180, $color2, $color1);
+	border-radius: if($circle == 1, 50%, initial);
 
 	& * {
 		position: relative;
-		z-index: if($❏ != null, $❏+1, 1);
+		z-index: if($zindex != null, $zindex+1, 1);
 	}
 
-	&:after, &:before {
+	&::after, &::before {
 		top: 0;
 		left: 0;
 		content: "";
-		z-index: if($❏ != null, $❏, 0);
+		z-index: if($zindex != null, $zindex, 0);
 		width: 100%;
 		height: 100%;
 		position: absolute;
