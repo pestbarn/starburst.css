@@ -1,5 +1,5 @@
 # starburst.css
->Everyone said it couldn't be done. I'm glad to prove them wrong. Creating starbursts in CSS will no longer be a problem.
+>Creating starbursts in CSS like there's no tomorrow!
 
 ### [Download source](https://github.com/pestbarn/starburst.css/blob/master/source/starburst.scss) ###
 [Official demo](http://www.mattias.pw/starburst.css/) | [Demo on codepen.io](http://codepen.io/pestbarn/full/RRYdxX/)
@@ -31,38 +31,37 @@ div.burst {
 
 ## Syntax & options
 ```scss
-@include starburst(align, deg, color1, color2, zindex, circle)
+@include starburst(align, degree, color1, color2, zindex, circle)
 ```
 | Setting   | Value                    | Example   | Description                                                                                                  |
 | :---      | :---                     | :---      | :---                                                                                                         |
 | *`align`  | `top|bottom|both`        | `both`    | Create starburst in top or bottom halves, or the full 360 degrees (both).                                    |
-| *`deg`    | `int`                    | `14`      | Amount of degrees for each line of burst. Smaller number = tighter burst.                                    |
+| *`degree` | `int`                    | `14`      | Amount of degrees for each line of burst. Smaller number = tighter burst.                                    |
 | *`color1` | `hex|rgb(a)|hsl(a)|name` | `maroon`  | Color to apply to burst. *Any valid CSS color will work.*                                                    |
 | *`color2` | `hex|rgb(a)|hsl(a)|name` | `#8b0000` | Second color to apply (note: mixing dark and bright colors is not recommended).                              |
 | `zindex`  | `int`                    | `1`       | Z-index for element containing the burst. Will increase with `+1` for all children. **Default:** `null`.     |
 | `circle`  | `boolean`                | `1`       | Set to `1` to create a circular element. Leave blank for default behavior. **Default:** `null`.              |
 **\* = Required attributes**
 
-## Variables explained
-As you may notice, the variables in the mixin are named with Unicode characters. Here's what they represent:
+## Variables
 
-| Variable | Representation                |
-| :---     | :---                          |
-| `$⇅`     | Alignment (`top|bottom|both`) |
-| `$↭`     | Angle degree                  |
-| `$⬔`     | First color                   |
-| `$⬕`     | Second color                  |
-| `$❏`     | Z-index                       |
-| `$⬤`     | Make element circular or not  |
-| `$✓`     | The gradient output           |
-| `$α`     | Set start angle               |
-| `$ω`     | Set end angle                 |
-| `$↻`     | 1-index incremental counter   |
-| `$✳`     | Current angle of burst ray    |
-| `$↩`     | Workaround for proper commas  |
-| `$❖`     | Current color of burst ray    |
-| `$⮐`     | Workaround for proper commas  |
-| `$⩲`     | Add current angle + set angle |
+| Variable      | Description                   |
+| :---          | :---                          |
+| `$align`      | Alignment (`top|bottom|both`) |
+| `$degree`     | Angle degree                  |
+| `$color1`     | First color                   |
+| `$color2`     | Second color                  |
+| `$zindex`     | Z-index                       |
+| `$circle`     | Make element circular or not  |
+| `$output`     | The gradient output           |
+| `$angleStart` | Set start angle               |
+| `$angleEnd`   | Set end angle                 |
+| `$i`          | 1-index incremental counter   |
+| `$currAngle`  | Current angle of burst ray    |
+| `$notLast`    | Workaround for proper commas  |
+| `$currColor`  | Current color of burst ray    |
+| `$checkLast`  | Workaround for proper commas  |
+| `$nextAngle`  | Add current angle + set angle |
 
 ## Browser support
 | Browser         | Version tested               |
@@ -74,6 +73,7 @@ As you may notice, the variables in the mixin are named with Unicode characters.
 | Edge            | *not tested*                 |
 | Chrome (mobile) | 52.0.2743.98 (Android 6.0.1) |
 | Safari (mobile) | 601.1 (iOS 9.3)              |
+| Windows Phone   | *not tested*                 |
 *Have you tested in other browsers? Please leave a comment [here](https://github.com/pestbarn/starburst.css/issues/1).*
 
 ## Credits
