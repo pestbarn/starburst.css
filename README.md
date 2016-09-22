@@ -22,8 +22,8 @@ This is where the [official demo page](http://www.mattias.pw/starburst.css/) for
 4. Install [Compass](http://compass-style.org/install/) by running `gem install compass`
 5. Fork or clone this repo, and check out the `gh-pages` branch
 6. Optional tools
-   6.1. Install [Haml](http://haml.info/download.html) by running `gem install haml`
-   6.2. Install [Homebrew](http://brew.sh/) and run `brew update`
-   6.3. Install [Node.js](https://nodejs.org/en/) by running `brew install node`
-   6.4. Install [Grunt](http://gruntjs.com/getting-started) by running `npm install -g grunt-cli`
-   6.5. Run `npm install` to install the dependencies listed in `package.json`
+  1. Install [Haml](http://haml.info/download.html) by running `gem install haml`
+  2. Install [Homebrew](http://brew.sh/) and run `brew update`
+  3. Install [Node.js](https://nodejs.org/en/) by running `brew install node`
+  4. Install [Grunt](http://gruntjs.com/getting-started) by running `npm install -g grunt-cli`
+  5. Run `npm install` to install the dependencies listed in `package.json`
