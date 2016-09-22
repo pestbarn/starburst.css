@@ -1,19 +1,19 @@
 # starburst.css
 
-## What's this?
+### What's this?
 This is where the [official demo page](http://www.mattias.pw/starburst.css/) for Starburst.css is located. You can fork or clone this branch to quickly set up your own demo page.
 
-## Minimum requirements
+### Minimum requirements
 * Sass 3.4.22 (Selective Steve)
 * Compass 1.0.3 (Polaris)
 
-## Optional (but helpful) tools
+**Optional (but helpful) tools**
 * Homebrew 0.9.9
 * Node 6.3.1
 * Haml 4.0.7
 * Grunt 1.0.1
 
-## Recommended workflow
+### Recommended workflow
 *Note: contributions to the Starburst mixin goes in the [master](https://github.com/pestbarn/starburst.css/tree/master) branch.*
 
 1. You should have Ruby installed by default, confirm this with `ruby -v` (otherwise, [download Ruby](https://www.ruby-lang.org/en/documentation/installation/))
