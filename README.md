@@ -1,7 +1,7 @@
 # starburst.css
 
 ## What's this?
-This is where the official demo page for Starburst.css is located. You can fork or clone this branch to quickly set up your own demo page.
+This is where the [official demo page](http://www.mattias.pw/starburst.css/) for Starburst.css is located. You can fork or clone this branch to quickly set up your own demo page.
 
 ## Minimum requirements
 * Sass 3.4.22 (Selective Steve)
