@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-haml2html');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.registerTask('default', ['haml','watch','compass']);
+	grunt.registerTask('default', ['haml','compass']);
 
 	grunt.event.on('watch', function(action, filepath, target) {
 		grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
