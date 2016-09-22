@@ -76,11 +76,6 @@ As you may notice, the variables in the mixin are named with Unicode characters.
 | Safari (mobile) | 601.1 (iOS 9.3)              |
 *Have you tested in other browsers? Please leave a comment [here](https://github.com/pestbarn/starburst.css/issues/1).*
 
-## Contributing
-Please use the `gh-pages` branch when adding your contributions. This way, you'll already have a site configured for use with Haml, Gruntfile, Gemfile, package.json, and Sass + Compass. When contributing, please make a pull request - don't push to `master`.
-
-You'll find the `gh-pages` branch [right here](https://github.com/pestbarn/starburst.css/tree/gh-pages#recommended-workflow-for-contributing-os-x).
-
 ## Credits
 * Special thanks to [Calley Nye](https://about.me/calleynye) for the [original inspiration](http://codepen.io/syren/pen/Ahkrv) which got me started on Starburst.css,
 * To [Lea Verou](http://lea.verou.me/) for the exceptional [Prism.js](http://prismjs.com/)
