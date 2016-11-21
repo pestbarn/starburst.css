@@ -1,21 +1,33 @@
 # starburst.css
->Creating starbursts in CSS like there's no tomorrow!
+>Now using real CSS!
 
-### [Download source](https://github.com/pestbarn/starburst.css/blob/master/source/starburst.scss) ###
+### Download: [Sass version](https://github.com/pestbarn/starburst.css/blob/master/source/starburst.scss) | [Vanilla version](https://github.com/pestbarn/starburst.css/blob/master/source/starburst.css) ###
 [Official demo](http://www.mattias.pw/starburst.css/) | [Demo on codepen.io](http://codepen.io/pestbarn/full/RRYdxX/)
 
 ## Requirements
 * Sass 3.4.22 (Selective Steve) or higher
 * Compass 1.0.3 (Polaris) or higher
+* *------OR------*
+* Just a regular browser *(vanilla version only)*
 
-## Installation
+## Installation: Sass
 1. Download or copy `starburst.scss` (or `git clone git@github.com:pestbarn/starburst.css.git`)
 2. Somewhere at the top of your Sass file, insert `@import "starburst";`
 3. Insert `@include starburst(opts);` inside the selector of your choice
 4. Set the element's `height` and `width`
 5. You're done!
 
+## Installation: vanilla
+1. Download or copy `starburst.css`
+2. Import/link to it like you would with any CSS file
+3. Use the class name `starburst` together with
+    * `starburst--top`
+    * `starburst--bottom`
+    * `starburst--both`, and/or
+    * `starburst--circular`
+
 ## Example
+Using Sass version:
 **.HTML**
 ```html
 <div class="burst"></div>
@@ -26,6 +38,20 @@ div.burst {
     width: 200px;
     height: 200px;
     @include starburst(both, 15, maroon, darkred, 1, 1);
+}
+```
+
+Using vanilla:
+**.HTML**
+```html
+<div class="my-div starburst starburst--top starburst--circular"></div>
+```
+
+**.CSS**
+```css
+div.my-div {
+    width: 200px;
+    height: 200px;
 }
 ```
 

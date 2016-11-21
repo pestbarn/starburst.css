@@ -1,0 +1,178 @@
+/*  STARBURST.CSS V 0.1
+	Using the SCSS version is highly recommended,
+	but if you feel you can handle this by
+	yourself, then you're in the right place!
+
+	USAGE:
+	<div class="starburst starburst--[top|bottom|both] [starburst--circular]">
+
+	You may set your colors below. Project defaults are:
+
+	#ff8c00
+	and
+	#d2691e
+
+	The angles are generated defaults. You may fiddle around with them
+	as much as you like. Generating your own using SCSS is preferable.
+*/
+
+.starburst {
+	/* GLOBAL */
+	position: relative;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+.starburst * {
+	/* CHILDREN */
+	position: relative;
+	z-index: 1;
+}
+.starburst--circular {
+	border-radius: 50%;
+}
+.starburst--top {
+	/* ALIGNMENT TOP */
+
+	background-image:
+	linear-gradient(180deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(192deg, transparent 50%, #d2691e 50%),
+	linear-gradient(204deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(216deg, transparent 50%, #d2691e 50%),
+	linear-gradient(228deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(240deg, transparent 50%, #d2691e 50%),
+	linear-gradient(252deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(264deg, transparent 50%, #d2691e 50%),
+	linear-gradient(276deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(288deg, transparent 50%, #d2691e 50%),
+	linear-gradient(300deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(312deg, transparent 50%, #d2691e 50%),
+	linear-gradient(324deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(336deg, transparent 50%, #d2691e 50%),
+	linear-gradient(348deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(360deg, transparent 50%, #d2691e 50%);
+	position: relative;
+	background-repeat: no-repeat;
+	background-color: #ff8c00;
+}
+.starburst--bottom {
+	/* ALIGNMENT BOTTOM */
+
+	background-image:
+	linear-gradient(0deg, transparent 50%, #d2691e 50%),
+	linear-gradient(12deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(24deg, transparent 50%, #d2691e 50%),
+	linear-gradient(36deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(48deg, transparent 50%, #d2691e 50%),
+	linear-gradient(60deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(72deg, transparent 50%, #d2691e 50%),
+	linear-gradient(84deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(96deg, transparent 50%, #d2691e 50%),
+	linear-gradient(108deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(120deg, transparent 50%, #d2691e 50%),
+	linear-gradient(132deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(144deg, transparent 50%, #d2691e 50%),
+	linear-gradient(156deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(168deg, transparent 50%, #d2691e 50%),
+	linear-gradient(180deg, transparent 50%, #ff8c00 50%);
+	position: relative;
+	background-repeat: no-repeat;
+	background-color: #d2691e;
+}
+.starburst--top::before,
+.starburst--top::after,
+.starburst--bottom::before,
+.starburst--bottom::after {
+	z-index: 1;
+}
+.starburst--both {
+	/* ALIGNMENT BOTH */
+
+	overflow: hidden;
+	background-image:
+	linear-gradient(0deg, transparent 50%, #d2691e 50%),
+	linear-gradient(11deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(22deg, transparent 50%, #d2691e 50%),
+	linear-gradient(33deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(44deg, transparent 50%, #d2691e 50%),
+	linear-gradient(55deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(66deg, transparent 50%, #d2691e 50%),
+	linear-gradient(77deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(88deg, transparent 50%, #d2691e 50%),
+	linear-gradient(99deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(110deg, transparent 50%, #d2691e 50%),
+	linear-gradient(121deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(132deg, transparent 50%, #d2691e 50%),
+	linear-gradient(143deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(154deg, transparent 50%, #d2691e 50%),
+	linear-gradient(165deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(176deg, transparent 50%, #d2691e 50%),
+	linear-gradient(187deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(198deg, transparent 50%, #d2691e 50%),
+	linear-gradient(209deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(220deg, transparent 50%, #d2691e 50%),
+	linear-gradient(231deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(242deg, transparent 50%, #d2691e 50%),
+	linear-gradient(253deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(264deg, transparent 50%, #d2691e 50%),
+	linear-gradient(275deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(286deg, transparent 50%, #d2691e 50%),
+	linear-gradient(297deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(308deg, transparent 50%, #d2691e 50%),
+	linear-gradient(319deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(330deg, transparent 50%, #d2691e 50%),
+	linear-gradient(341deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(352deg, transparent 50%, #d2691e 50%);
+}
+.starburst--both::before {
+	background-image:
+	linear-gradient(180deg, transparent 50%, #d2691e 50%),
+	linear-gradient(191deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(202deg, transparent 50%, #d2691e 50%),
+	linear-gradient(213deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(224deg, transparent 50%, #d2691e 50%),
+	linear-gradient(235deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(246deg, transparent 50%, #d2691e 50%),
+	linear-gradient(257deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(268deg, transparent 50%, #d2691e 50%),
+	linear-gradient(279deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(290deg, transparent 50%, #d2691e 50%),
+	linear-gradient(301deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(312deg, transparent 50%, #d2691e 50%),
+	linear-gradient(323deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(334deg, transparent 50%, #d2691e 50%),
+	linear-gradient(345deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(356deg, transparent 50%, #d2691e 50%);
+}
+.starburst--both::after {
+	top: 50% !important;
+	background-position: 0 100%;
+	background-size: 100% 200%;
+	background-image:
+	linear-gradient(0deg, transparent 50%, #d2691e 50%),
+	linear-gradient(11deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(22deg, transparent 50%, #d2691e 50%),
+	linear-gradient(33deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(44deg, transparent 50%, #d2691e 50%),
+	linear-gradient(55deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(66deg, transparent 50%, #d2691e 50%),
+	linear-gradient(77deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(88deg, transparent 50%, #d2691e 50%),
+	linear-gradient(99deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(110deg, transparent 50%, #d2691e 50%),
+	linear-gradient(121deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(132deg, transparent 50%, #d2691e 50%),
+	linear-gradient(143deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(154deg, transparent 50%, #d2691e 50%),
+	linear-gradient(165deg, transparent 50%, #ff8c00 50%),
+	linear-gradient(176deg, transparent 50%, #d2691e 50%);
+}
+.starburst--both::before,
+.starburst--both::after {
+	top: 0;
+	left: 0;
+	content: "";
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
