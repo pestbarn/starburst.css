@@ -27,12 +27,12 @@
     * `starburst--circular`
 
 ## Example
-Using Sass version:
-**.HTML**
+**Using Sass version:**
+
 ```html
 <div class="burst"></div>
 ```
-**.SCSS**
+
 ```scss
 div.burst {
     width: 200px;
@@ -41,15 +41,14 @@ div.burst {
 }
 ```
 
-Using vanilla:
-**.HTML**
+**Using vanilla:**
+
 ```html
-<div class="my-div starburst starburst--top starburst--circular"></div>
+<div class="burst starburst starburst--top starburst--circular"></div>
 ```
 
-**.CSS**
 ```css
-div.my-div {
+div.burst {
     width: 200px;
     height: 200px;
 }
@@ -59,35 +58,35 @@ div.my-div {
 ```scss
 @include starburst(align, degree, color1, color2, zindex, circle)
 ```
-| Setting   | Value                    | Example   | Description                                                                                                  |
-| :---      | :---                     | :---      | :---                                                                                                         |
-| *`align`  | `top|bottom|both`        | `both`    | Create starburst in top or bottom halves, or the full 360 degrees (both).                                    |
-| *`degree` | `int`                    | `14`      | Amount of degrees for each line of burst. Smaller number = tighter burst.                                    |
-| *`color1` | `hex|rgb(a)|hsl(a)|name` | `maroon`  | Color to apply to burst. *Any valid CSS color will work.*                                                    |
-| *`color2` | `hex|rgb(a)|hsl(a)|name` | `#8b0000` | Second color to apply (note: mixing dark and bright colors is not recommended).                              |
-| `zindex`  | `int`                    | `1`       | Z-index for element containing the burst. Will increase with `+1` for all children. **Default:** `null`.     |
-| `circle`  | `boolean`                | `1`       | Set to `1` to create a circular element. Leave blank for default behavior. **Default:** `null`.              |
+| Setting   | Value                                   | Example   | Description                                                                                                  |
+| :---      | :---                                    | :---      | :---                                                                                                         |
+| *`align`  | `top&#124;bottom&#124;both`             | `both`    | Create starburst in top or bottom halves, or the full 360 degrees (both).                                    |
+| *`degree` | `int`                                   | `14`      | Amount of degrees for each line of burst. Smaller number = tighter burst.                                    |
+| *`color1` | `hex&#124;rgb(a)&#124;hsl(a)&#124;name` | `maroon`  | Color to apply to burst. *Any valid CSS color will work.*                                                    |
+| *`color2` | `hex&#124;rgb(a)&#124;hsl(a)&#124;name` | `#8b0000` | Second color to apply (note: mixing dark and bright colors is not recommended).                              |
+| `zindex`  | `int`                                   | `1`       | Z-index for element containing the burst. Will increase with `+1` for all children. **Default:** `null`.     |
+| `circle`  | `boolean`                               | `1`       | Set to `1` to create a circular element. Leave blank for default behavior. **Default:** `null`.              |
 **\* = Required attributes**
 
 ## Variables
 
-| Variable      | Description                   |
-| :---          | :---                          |
-| `$align`      | Alignment (`top|bottom|both`) |
-| `$degree`     | Angle degree                  |
-| `$color1`     | First color                   |
-| `$color2`     | Second color                  |
-| `$zindex`     | Z-index                       |
-| `$circle`     | Make element circular or not  |
-| `$output`     | The gradient output           |
-| `$angleStart` | Set start angle               |
-| `$angleEnd`   | Set end angle                 |
-| `$i`          | 1-index incremental counter   |
-| `$currAngle`  | Current angle of burst ray    |
-| `$notLast`    | Workaround for proper commas  |
-| `$currColor`  | Current color of burst ray    |
-| `$checkLast`  | Workaround for proper commas  |
-| `$nextAngle`  | Add current angle + set angle |
+| Variable      | Description                             |
+| :---          | :---                                    |
+| `$align`      | Alignment (`top&#124;bottom&#124;both`) |
+| `$degree`     | Angle degree                            |
+| `$color1`     | First color                             |
+| `$color2`     | Second color                            |
+| `$zindex`     | Z-index                                 |
+| `$circle`     | Make element circular or not            |
+| `$output`     | The gradient output                     |
+| `$angleStart` | Set start angle                         |
+| `$angleEnd`   | Set end angle                           |
+| `$i`          | 1-index incremental counter             |
+| `$currAngle`  | Current angle of burst ray              |
+| `$notLast`    | Workaround for proper commas            |
+| `$currColor`  | Current color of burst ray              |
+| `$checkLast`  | Workaround for proper commas            |
+| `$nextAngle`  | Add current angle + set angle           |
 
 ## Browser support
 | Browser         | Version tested               |
@@ -100,7 +99,7 @@ div.my-div {
 | Chrome (mobile) | 52.0.2743.98 (Android 6.0.1) |
 | Safari (mobile) | 601.1 (iOS 9.3)              |
 | Windows Phone   | *not tested*                 |
-*Have you tested in other browsers? Please leave a comment [here](https://github.com/pestbarn/starburst.css/issues/1).*
+**Have you tested in other browsers? Please leave a comment [here](https://github.com/pestbarn/starburst.css/issues/1).**
 
 ## Credits
 * Special thanks to [Calley Nye](https://about.me/calleynye) for the [original inspiration](http://codepen.io/syren/pen/Ahkrv) which got me started on Starburst.css,
