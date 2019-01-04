@@ -2,7 +2,7 @@
 >Now using real CSS!
 
 ### Download: [Sass version](https://github.com/pestbarn/starburst.css/blob/master/source/starburst.scss) | [Vanilla version](https://github.com/pestbarn/starburst.css/blob/master/source/starburst.css) ###
-[Official demo](http://www.mattias.pw/starburst.css/) | [Demo on codepen.io](http://codepen.io/pestbarn/full/RRYdxX/)
+[Official demo](https://codepen.io/lethargic/full/RRYdxX)
 
 ## Requirements
 * Sass 3.4.22 (Selective Steve) or higher
@@ -11,7 +11,7 @@
 * Just a regular browser *(vanilla version only)*
 
 ## Installation: Sass
-1. Download or copy `starburst.scss` (or `git clone git@github.com:pestbarn/starburst.css.git`)
+1. Download or copy this repo (or `git clone git@github.com:pestbarn/starburst.css.git`)
 2. Somewhere at the top of your Sass file, insert `@import "starburst";`
 3. Insert `@include starburst(opts);` inside the selector of your choice
 4. Set the element's `height` and `width`
