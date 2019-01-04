@@ -91,13 +91,13 @@ div.burst {
 ## Browser support
 | Browser         | Version tested               |
 | :---            | ---:                         |
-| Chrome          | 52.0.2743                    |
-| Firefox         | 47.0.1+                      |
-| Safari          | 9.1.1                        |
-| IE              | *not tested*                 |
-| Edge            | *not tested*                 |
-| Chrome (mobile) | 52.0.2743.98 (Android 6.0.1) |
-| Safari (mobile) | 601.1 (iOS 9.3)              |
+| Chrome          | 52+                          |
+| Firefox         | 47+                          |
+| Safari          | 9.1.1+                       |
+| IE              | 11                           |
+| Edge            | 44+                          |
+| Chrome (mobile) | 52+ (on Android 6.0.1)       |
+| Safari (mobile) | 601.1+ (on iOS 9.3)          |
 | Windows Phone   | *not tested*                 |
 **Have you tested in other browsers? Please leave a comment [here](https://github.com/pestbarn/starburst.css/issues/1).**
 
